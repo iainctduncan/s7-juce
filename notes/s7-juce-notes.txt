@@ -1,0 +1,3 @@
+S7 juce notes
+- first thing to do:
+- make a button in a main panel that logs a message to xcode console

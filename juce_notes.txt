@@ -1,0 +1,57 @@
+My JUCE notes
+
+********************************************************************************
+Tutorials done:
+- Application Window: https://docs.juce.com/master/tutorial_main_window.html
+  - info on main window, making it native, default size and position, etc
+
+- MainComponent: https://docs.juce.com/master/tutorial_main_component.html
+  - making a main content component
+
+- The Graphics Class - https://docs.juce.com/master/tutorial_graphics_class.html
+
+- Parent and Child components https://docs.juce.com/master/tutorial_component_parents_children.html
+  - examples of hierarchy of components, with parents drawing children
+
+- Layout Basics: https://docs.juce.com/master/tutorial_rectangle_advanced.html
+  - examples of rectangular layouts that respond properly to resizing and divide the screen up
+
+- Responsive Layouts with flexbox and grid: https://docs.juce.com/master/tutorial_flex_box_grid.html
+
+- Look and Feel - https://docs.juce.com/master/tutorial_look_and_feel_customisation.html
+  - how to overide look and feel defaults down a component hierarchy
+
+ 
+********************************************************************************
+Gui Component notes
+- Component is the base class for all user interface objects
+- MainComponent, in MainComponent.cpp is where all my gui elements should be defined
+  and placed
+- Main.cpp has my app class, derived from JuceApplication
+- AudioAppComponent is an abc combining Component with AudioSource
+  - main component in an Audio Application derives from AudioAppComponent
+- AnimatedAppComponent combines Component with Timer  
+
+- the main component in the app is owned by the main application window and 
+  holds the window's content, all other components will be children of it
+- DocumentWindow class is a component class for this main window
+- components must all overide the following base virtual methods:
+  - Component::paint   - draws on screen, must be implemented for all components
+  - Component::resized - what happens when component is resized
+
+- component size can be set either in a components constructor, or in the call in the parent
+  when its making it
+  - you must do this, not setting size is a bug
+- NB: resize is always called before paint on startup 
+- resize always triggers a call to paint automatically
+- we never call paint, it's only a callback
+
+- ui controller objects (buttons, sliders, etc) are "broadcaster obejcts"
+- to respond, other classes need to be listeners for that type of broadcaster
+  - listeners need to be registered with at least one specific broadcaster of the type
+- many broadcaster objects contain a nested Listener class
+- any component can inherit from a listener class in order to be able to listen
+  then the class which is inheriting implements the callback for it:
+  - void buttonClicked (Button* button) override {}
+
+- left off going to add the lambda function from the listeners tutorial
