@@ -5,6 +5,12 @@
               cppLanguageStandard="17">
   <MAINGROUP id="q5yC5m" name="s7-juce">
     <GROUP id="{D1D4F1B6-6B63-0CAD-712B-0822FE6FB905}" name="Source">
+      <FILE id="AegU92" name="mus-config.h" compile="0" resource="0" file="Source/mus-config.h"/>
+      <FILE id="Wg3Ygy" name="s7.h" compile="0" resource="0" file="Source/s7.h"/>
+      <FILE id="AMAW75" name="s7.c" compile="1" resource="0" file="Source/s7.c"/>
+      <FILE id="XYiHtP" name="Engine.h" compile="0" resource="0" file="Source/Engine.h"/>
+      <FILE id="Oo9Ocf" name="utils.cpp" compile="1" resource="0" file="Source/utils.cpp"/>
+      <FILE id="R1biPI" name="utils.h" compile="0" resource="0" file="Source/utils.h"/>
       <FILE id="XoVriN" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="kOWMBZ" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="FfnVlY" name="MainComponent.cpp" compile="1" resource="0"
