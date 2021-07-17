@@ -9,8 +9,7 @@
 class Engine  
 {
 public:
-    Engine(MainComponent *parentComponent)
-    {
+    Engine(MainComponent *parentComponent) {
         // store the reference to the parent juce component so we can callback to it
         parent = parentComponent;
 

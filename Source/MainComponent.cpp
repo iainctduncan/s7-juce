@@ -1,8 +1,7 @@
 #include "MainComponent.h"
 
 //==============================================================================
-MainComponent::MainComponent()
-{
+MainComponent::MainComponent() {
     // init the engine, passing a reference to self to store in the engine component
     engine = new Engine(this);
 
@@ -17,12 +16,9 @@ MainComponent::MainComponent()
 
 }
 
-MainComponent::~MainComponent()
-{
-}
+MainComponent::~MainComponent() { }
 
-void MainComponent::resized()
-{
+void MainComponent::resized() {
     btn.setBounds (10, 10, getWidth() - 20, 40);
     label.setBounds (10, 60, getWidth() - 20, 40); 
 }

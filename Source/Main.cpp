@@ -10,8 +10,7 @@
     #include "MainComponent.h"
     
     //==============================================================================
-    class S7JuceApplication  : public juce::JUCEApplication
-    {
+    class S7JuceApplication  : public juce::JUCEApplication {
     public:
         //==============================================================================
         S7JuceApplication() {}
@@ -21,29 +20,24 @@
         bool moreThanOneInstanceAllowed() override             { return true; }
     
         //==============================================================================
-        void initialise (const juce::String& commandLine) override
-        {
+        void initialise (const juce::String& commandLine) override {
             // This method is where you should put your application's initialisation code..
-    
             mainWindow.reset (new MainWindow (getApplicationName()));
         }
     
-        void shutdown() override
-        {
+        void shutdown() override {
             // Add your application's shutdown code here..
             mainWindow = nullptr; // (deletes our window)
         }
     
         //==============================================================================
-        void systemRequestedQuit() override
-        {
+        void systemRequestedQuit() override {
             // This is called when the app is being asked to quit: you can ignore this
             // request and let the app carry on running, or call quit() to allow the app to close.
             quit();
         }
     
-        void anotherInstanceStarted (const juce::String& commandLine) override
-        {
+        void anotherInstanceStarted (const juce::String& commandLine) override {
             // When another instance of the app is launched while this one is running,
             // this method is invoked, and the commandLine parameter tells you what
             // the other instance's command-line arguments were.
@@ -76,8 +70,7 @@
                 setVisible (true);
             }
     
-            void closeButtonPressed() override
-            {
+            void closeButtonPressed() override {
                 // This is called when the user tries to close this window. Here, we'll just
                 // ask the app to quit when this happens, but you can change this to do
                 // whatever you need.

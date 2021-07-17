@@ -1,3 +1,17 @@
 S7 juce notes
-- first thing to do:
-- make a button in a main panel that logs a message to xcode console
+- got basic ui with a button and listener working
+- trying to figure out what 
+
+- so really I want a class for the engine that can act as an event
+  listener, and can also have a reference to the main component to 
+  make things happen
+- is it ok for engine class to be Juce dependent??
+  I guess so??
+
+- we know:
+  - there ought to be a class for the engine that gets
+    instantiated in the main component
+
+- left off, I think I have the way the components reference
+  each other kinda borked
+- stuck on the circular pointer stuff
